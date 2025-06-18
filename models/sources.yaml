@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: store_data # A logical name for your source system
+    database: test # The database where your source tables reside
+    schema: dbo # The schema where your source tables reside (usually dbo for SQL Server)
+    tables:
+      - name: customer_events
+      - name: order_items
+      - name: orders
+      - name: products
