@@ -1,0 +1,23 @@
+SELECT 
+    event_id,
+    user_id,
+    session_id,
+    event_type,
+    event_timestamp_utc,
+    url,
+    user_agent_raw,
+    device_type,
+    browser,
+    os,
+    ip_address,
+    screen_resolution_width,
+    screen_resolution_height,
+    product_id,
+    quantity,
+    price_usd,
+    promo_code_applied,
+    latitude,
+    longitude,
+    referrer_url
+FROM 
+    {{ source('store_data', 'customer_events') }}
